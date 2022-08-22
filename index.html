@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据可视化</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <!-- 头部盒子 -->
+    <header>
+        <h1>数据可视化-ECharts</h1>
+        <div class="showTime">Time</div>
+    </header>
+
+    <!-- 页面主体部分 -->
+    <section class="mainbox">
+        <div class="column">
+            <!-- 左侧盒子 -->
+            <div class="panel bar-lt">
+                <h2 class="left-first"></h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line-lt">
+                <h2 class="left-second">
+                    
+                </h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie-lt">
+                <h2 class="left-third"></h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+        <div class="column">
+            <!-- 中间盒子 -->
+
+            <!-- no 模块制作 -->
+            <div class="no">
+                <div class="no-hd">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="no-bd">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 地图 模块制作 -->
+            <div class="map">
+                <div class="map1"></div>
+                <div class="map2"></div>
+                <div class="map3"></div>
+                <div class="chart"></div>
+            </div>
+        </div>
+        <div class="column">
+            <!-- 右侧盒子 -->
+            <div class="panel bar-rt">
+                <h2 class="right-first"></h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line-rt">
+                <h2 class="right-second"></h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie-rt">
+                <h2 class="right-third"></h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/flexible.js"></script>
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/jquery.js"></script>
+    <!-- 引入china.js 中国地图 -->
+    <script src="./js/china.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>

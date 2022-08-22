@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecarts 使用</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <script src="./js/echarts.min.js"></script>
+    <script>
+        //初始化实例对象 echarts.init(dom容器)
+        var myChart = echarts.init(document.querySelector('.box'))
+        //指定配置项和数据
+        var option = {
+            title: {
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {},
+            legend: {
+                data: ['销量']
+            },
+            xAxis: {
+                data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+            },
+            yAxis: {},
+            series: [
+                {
+                    name: '销量',
+                    type: 'bar',
+                    data: [5, 20, 36, 10, 10, 20]
+                }
+            ]
+        };
+        //把配置项给实例对象
+        myChart.setOption(option);
+    </script>
+
+    <!--
+        title：标题组件  设置图表标题
+                -- text:'名字'    
+        
+        series
+            系列列表。每个系列通过 type 决定自己的图表类型
+            大白话：图标数据，指定什么类型的图标，可以多个图表重叠。
+                --line 折线图 bar 柱状图
+                    数据堆叠，同个类目轴上系列配置相同的stack值后 后一个系列的值会在前一个系列的值上相加。 
+        
+        tooltip：提示框组件  
+                --trigger 触发方式
+                    --axis 坐标轴  item 柱状图
+        toolbox: 工具箱组件 
+                --feature:{saveAsImage:{}}   另存为图片
+
+        grid：直角坐标系内绘图网格。
+                --可以控制线型图，柱状图 图标大小
+                    --left right bottom 与方向的距离  containLable:true 显示刻度
+
+
+        xAxis：直角坐标系 grid 中的 x 轴
+        yAxis：直角坐标系 grid 中的 y 轴
+            boundaryGap: 坐标轴两边留白策略 true，这时候刻度只是作为分隔线，标签和数据点都会在两个刻度之间的带(band)中间。
+
+            
+        legend：图例组件
+            --如果series里面有了 name 值 则 legend 里面的 data 可以删掉
+
+        color：调色盘颜色列表
+            后跟数组
+    -->
+
+</body>
+
+</html>
